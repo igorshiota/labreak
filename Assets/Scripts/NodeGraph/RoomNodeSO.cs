@@ -94,9 +94,16 @@ public class RoomNodeSO : ScriptableObject
 
     private void ProcessMouseDownEvent(Event currentEvent)
     {
+        // left click down
         if (currentEvent.button == 0)
         {
             ProcessLeftClickDownEvent();
+        }
+
+        // right click down
+        if (currentEvent.button == 1)
+        {
+            ProcessRightClickDownEvent(currentEvent);
         }
     }
 
@@ -113,6 +120,11 @@ public class RoomNodeSO : ScriptableObject
         {
             isSelected = true;
         }
+    }
+
+    private void ProcessRightClickDownEvent(Event currentEvent)
+    {
+        roomNodeGraph.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);
     }
 
     private void ProcessMouseUpEvent(Event currentEvent)
@@ -155,6 +167,18 @@ public class RoomNodeSO : ScriptableObject
     {
         rect.position += delta;
         EditorUtility.SetDirty(this); // this line just tells Unity that something's happened and it needs to be saved
+    }
+
+    public bool AddChildRoomNodeIDToRoomNode(string childID)
+    {
+        childRoomNodeIDList.Add(childID);
+        return true;
+    }
+
+    public bool AddParentRoomNodeIDToRoomNode(string parentID)
+    {
+        parentRoomNodeIDList.Add(parentID);
+        return true;
     }
 
 #endif

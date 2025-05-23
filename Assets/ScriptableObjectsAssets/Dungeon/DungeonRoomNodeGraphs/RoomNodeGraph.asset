@@ -20,12 +20,12 @@ MonoBehaviour:
   roomNodeTypeList: {fileID: 11400000, guid: 42d621149190b4b08a47ec71aeab7d65, type: 2}
   rect:
     serializedVersion: 2
-    x: 421
+    x: 354
     y: 126
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 0
+  isSelected: 1
 --- !u!114 &-7308626266629012023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +70,8 @@ MonoBehaviour:
   - {fileID: -8057238380936171685}
   - {fileID: 1394271237686975826}
   - {fileID: -7308626266629012023}
+  roomNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
 --- !u!114 &1394271237686975826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,12 +92,12 @@ MonoBehaviour:
   roomNodeTypeList: {fileID: 11400000, guid: 42d621149190b4b08a47ec71aeab7d65, type: 2}
   rect:
     serializedVersion: 2
-    x: 371
-    y: 260
+    x: 315
+    y: 291
     width: 160
     height: 75
   isLeftClickDragging: 0
-  isSelected: 0
+  isSelected: 1
 --- !u!114 &7763330406917273010
 MonoBehaviour:
   m_ObjectHideFlags: 0
